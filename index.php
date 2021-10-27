@@ -84,9 +84,9 @@ $Mugs_Party;
                      *
                      * Le lien "Ajouter un mug" ci dessous doit être visible et accessible seulement pour les utilisateurs connectés (user). ***
                      */
-                    //if (isset($_SESSION['user'])) { 
+                    if (isset($_SESSION['user'])) { 
                         echo '<a href="#" class="btn btn-outline-secondary"><i class="fa fa-plus mr-2"></i>Ajouter un mug</a>';
-                    // } 
+                     } 
                     ?>
 
                 </div>
@@ -132,8 +132,6 @@ $Mugs_Party;
 
 
 
-
-
         <div id="sorting-bar" class="container-fluid sorting-bar">
         <div class="container">
   <form class="form-inline" action="/recherche/" method="get">
@@ -143,7 +141,7 @@ $Mugs_Party;
 
         <!-- groupe 1 -->
         <div class="lolo">En stock:
-          <select id="oCategorie" name="oCategorie" class="form-control">
+          <select id=".filter-stock" name=".filter-stock" class="form-control">
             <option selected="selected" value="0">All</option>
             <option value="1">Oui</option>
             <option value="2">Non</option>
@@ -151,7 +149,7 @@ $Mugs_Party;
 
         <!-- groupe 2 -->  
         Tarif: 
-          <select id="oCategorie" name="oCategorie" class="form-control">
+          <select id=".tarif" name=".tarif" class="form-control">
             <option selected="selected" value="1">All</option>
             <option value="1">Supérieur</option>
             <option value="2">Inférieur</option>
@@ -159,7 +157,7 @@ $Mugs_Party;
 
         <!-- groupe 3 --> 
         à 
-          <select id="oCategorie" name="oCategorie" class="form-control">
+          <select id="" name="" class="form-control">
             <option selected="selected" value="2">All</option>
             <option value="1">Oui</option>
             <option value="2">Non</option>
@@ -168,7 +166,7 @@ $Mugs_Party;
 
         <!-- groupe 4 -->  
         Couleur: 
-          <select id="oCategorie" name="oCategorie" class="form-control">
+          <select id=".filter-couleur" name=".filter-couleur" class="form-control">
             <option selected="selected" value="3">All</option>
             <option value="1">Oui</option>
             <option value="2">Non</option>
@@ -176,7 +174,7 @@ $Mugs_Party;
 
         <!-- groupe 5 -->   
         Taille: 
-          <select id="oCategorie" name="oCategorie" class="form-control">
+          <select id=".filter-taille" name=".filter-taille" class="form-control">
             <option selected="selected" value="4">All</option>
             <option value="1">Oui</option>
             <option value="2">Non</option>
@@ -224,7 +222,7 @@ $Mugs_Party;
             <data-filter=".filter-stock">
             <data-filter=".filter-couleur">
             <data-filter=".filter-taille">
-            <data-filter=".filter-nouveauté">
+            <data-filter=".filter-nouveaute">
             <data-filter=".filter-tendances">
           </ul>
         </div>
@@ -232,24 +230,24 @@ $Mugs_Party;
 
     <div class="row portfolio-container">
         <!-- CARD 1 -->
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-stock">
           <div class="party-wrap">
             <img src="images/party/001.png" class="img-fluid" alt="">
             <div class="party-info">
               <div class="party-links">
-                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="Test"><i class="bx bx-plus"></i></a>
+                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="001"><i class="bx bx-plus"></i></a>
                 <a href="party-details.html" data-gallery="partyDetailsGallery" data-glightbox="type: external" class="party-details-lightbox" title="party Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
         </div>
         <!-- CARD 2 -->
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-couleur">
           <div class="party-wrap">
             <img src="images/party/001.png" class="img-fluid" alt="">
             <div class="party-info">
               <div class="party-links">
-                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="Test"><i class="bx bx-plus"></i></a>
+                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="002"><i class="bx bx-plus"></i></a>
                 <a href="party-details.html" data-gallery="partyDetailsGallery" data-glightbox="type: external" class="party-details-lightbox" title="party Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -257,12 +255,12 @@ $Mugs_Party;
         </div>
         
         <!-- CARD 3 -->
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-taille">
           <div class="party-wrap">
             <img src="images/party/001.png" class="img-fluid" alt="">
             <div class="party-info">
               <div class="party-links">
-                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="Test"><i class="bx bx-plus"></i></a>
+                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="003"><i class="bx bx-plus"></i></a>
                 <a href="party-details.html" data-gallery="partyDetailsGallery" data-glightbox="type: external" class="party-details-lightbox" title="party Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -270,17 +268,23 @@ $Mugs_Party;
         </div>
          
         <!-- CARD 4 -->
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-nouveaute">
           <div class="party-wrap">
             <img src="images/party/001.png" class="img-fluid" alt="">
             <div class="party-info">
               <div class="party-links">
-                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="Test"><i class="bx bx-plus"></i></a>
+                <a href="images/party/001.png" data-gallery="partyGallery" class="party-lightbox" title="004"><i class="bx bx-plus"></i></a>
                 <a href="party-details.html" data-gallery="partyDetailsGallery" data-glightbox="type: external" class="party-details-lightbox" title="party Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
         </div>
+
+        </div>
+
+</div>
+
+        </section>
 
         <?php
         /**
